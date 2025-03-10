@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app.apps.AppConfig',
+<<<<<<< HEAD
     'rest_framework',
+=======
+>>>>>>> 20e128895b83184b894cd4fb3d8bf9cc08c331bc
 ]
 
 MIDDLEWARE = [
@@ -56,7 +59,11 @@ ROOT_URLCONF = 'chat.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': ['templates'],
+=======
+        'DIRS': [],
+>>>>>>> 20e128895b83184b894cd4fb3d8bf9cc08c331bc
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,7 +75,11 @@ TEMPLATES = [
         },
     },
 ]
+<<<<<<< HEAD
 GEMINI_API_KEY = ""
+=======
+
+>>>>>>> 20e128895b83184b894cd4fb3d8bf9cc08c331bc
 WSGI_APPLICATION = 'chat.wsgi.application'
 
 
@@ -112,6 +123,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+<<<<<<< HEAD
 import os 
 
 # Static files (CSS, JavaScript, Images)
@@ -122,6 +134,14 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'chat/static') ,
 
 ]
+=======
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/5.1/howto/static-files/
+
+STATIC_URL = 'static/'
+>>>>>>> 20e128895b83184b894cd4fb3d8bf9cc08c331bc
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
