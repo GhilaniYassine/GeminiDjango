@@ -5,7 +5,7 @@ class GeminiService:
     def __init__(self):
         self.api_key = settings.GEMINI_API_KEY
         genai.configure(api_key=self.api_key)
-        self.model = genai.GenerativeModel('gemini-1.0-pro')
+        self.model = genai.GenerativeModel('gemini-2.0-flash')
 
     def generate_response(self, user_input):
         try:
