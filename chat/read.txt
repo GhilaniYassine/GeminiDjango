@@ -1,0 +1,29 @@
+how to solve this conflicts : 
+
+Unstage all files:
+git reset
+
+Pull the latest changes from the remote repository:
+git pull origin main
+Stage your changes again:
+git add .
+Commit your changes:
+
+git commit -m 'moving to the database'
+Push your changes to the remote repository:
+git push origin main
+
+This sequence of commands will ensure that you have the latest changes from the remote repository and that your local changes are properly integrated before pushing.
+
+
+
+
+----------------------------------------------------------------------------
+Context Processor Path Error Explanation
+In Django, context processors are Python functions that add specific data to the template context. The authentication context processor (django.contrib.auth.context_processors.auth) specifically adds authentication-related variables to all templates, which the Django admin site depends on.
+
+When there was a space in the path ('django.contrib.auth.context_processors. auth' instead of 'django.contrib.auth.context_processors.auth'), Django treated it as a completely different, non-existent path. This prevented the authentication data from being available to the admin templates.
+
+Django's error system correctly identified that while you had included the admin app in INSTALLED_APPS, you didn't have the required authentication context processor properly configured, resulting in the SystemCheckError.
+
+This demonstrates how even a small typo like an extra space can cause significant issues in configuration paths, as Django (and most frameworks) require exact path specifications to locate required components.

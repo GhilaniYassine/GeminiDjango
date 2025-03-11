@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
 from django.http import HttpResponse
+from  .models import chatHistory
+
 
 from django.shortcuts import render
 from rest_framework.views import APIView
@@ -27,5 +29,16 @@ class ChatAPIView(APIView):
         
         # Get response from Gemini
         response_text = gemini_service.generate_response(message)
+        data = {
+            'message': message,
+            'response': response_text
+        }
+        print(data)
+        #
+        # Save the chat history
+        chatHistory.objects.create(
+            user_input=message,
+            response=response_text
+        )
         
         return Response({'response': response_text}) 
