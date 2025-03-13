@@ -67,7 +67,7 @@ TEMPLATES = [
         },
     },
 ]
-GEMINI_API_KEY = ""
+GEMINI_API_KEY = "AIzaSyChEC6TZ6bSwiWg_jRObwXosu7m_J-mp9A"
 WSGI_APPLICATION = 'chat.wsgi.application'
 
 

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from django.http import HttpResponse
-from  .models import chatHistory
+from  .models import ChatHistory ,User
 
 
 from django.shortcuts import render
@@ -36,7 +36,7 @@ class ChatAPIView(APIView):
         print(data)
         #
         # Save the chat history
-        chatHistory.objects.create(
+        ChatHistory.objects.create(
             user_input=message,
             response=response_text
         )
